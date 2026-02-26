@@ -12,3 +12,8 @@ btn.addEventListener('click', () => {
         btn.innerText = "เปลี่ยนเป็นโหมดมืด";
     }
 });
+
+function increaseFontSize(){
+    let h1 = document.getElementById("wellcome");
+    h1.style.fontSize = "100px";
+}

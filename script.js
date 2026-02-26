@@ -13,6 +13,10 @@ btn.addEventListener('click', () => {
     }
 });
 
+const increaseFontSize = document.getElementById('increaseFontSize');
+
+increaseFontSize.addEventListener('click', increaseFontSize);
+
 function increaseFontSize(){
     let h1 = document.getElementById("wellcome");
     h1.style.fontSize = "100px";

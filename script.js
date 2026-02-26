@@ -13,9 +13,9 @@ btn.addEventListener('click', () => {
     }
 });
 
-const increaseFontSize = document.getElementById('increaseFontSize');
+const increaseFontSizebtn = document.getElementById('increaseFontSize');
 
-increaseFontSize.addEventListener('click', increaseFontSize);
+increaseFontSizebtn.addEventListener('click', increaseFontSize);
 
 function increaseFontSize(){
     let h1 = document.getElementById("wellcome");

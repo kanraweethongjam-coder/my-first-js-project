@@ -30,7 +30,7 @@ const ChangeColorBtn = document.getElementById("ChangeColor");
 const h1_ChangeColor = document.getElementById("wellcome")
 
 ChangeColorBtn.addEventListener('click', () => {
-    h1_ChangeColor.classList.toggle("big-text");
+    h1_ChangeColor.classList.toggle("change-color");
 
     if(h1_ChangeColor.classList.contains("change-color")){
         ChangeColorBtn.innerText = "สีปกติ";

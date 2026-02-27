@@ -14,7 +14,7 @@ btn.addEventListener('click', () => {
 });
 
 const fontBtn = document.getElementById("increaseFontSize");
-const h1 = document.getElementById("wellcome");
+const h1 = document.getElementById("welcome");
 
 fontBtn.addEventListener("click", () => {
     h1.classList.toggle("big-text");
@@ -27,12 +27,11 @@ fontBtn.addEventListener("click", () => {
 });
 
 const ChangeColorBtn = document.getElementById("ChangeColor");
-const h1_ChangeColor = document.getElementById("wellcome")
 
 ChangeColorBtn.addEventListener('click', () => {
-    h1_ChangeColor.classList.toggle("change-color");
+    h1.classList.toggle("change-color");
 
-    if(h1_ChangeColor.classList.contains("change-color")){
+    if(h1.classList.contains("change-color")){
         ChangeColorBtn.innerText = "สีปกติ";
     } else {
         ChangeColorBtn.innerText = "สีแดง";

@@ -38,3 +38,33 @@ ChangeColorBtn.addEventListener('click', () => {
     }
 
 });
+
+const quoteText = document.getElementById('quoteText');
+const quoteBtn = document.getElementById('quoteBtn');
+
+// ฟังก์ชันสำหรับไปดึงข้อมูล
+async function getQuote() {
+    try {
+        quoteText.innerText = "กำลังโหลด...";
+        
+        // 1. ไปขอข้อมูลจาก API (ใช้ URL นี้เป็นตัวอย่าง)
+        const response = await fetch('https://api.freeapi.app/api/v1/public/quotes/quote/random');
+        
+        // 2. แปลงข้อมูลที่ได้มาเป็น JSON (รูปแบบที่ JS อ่านง่าย)
+        const data = await response.json();
+        
+        // 3. เอาข้อมูลไปโชว์ใน HTML
+        // (โครงสร้างข้อมูลแต่ละที่อาจไม่เหมือนกัน ต้องลอง console.log ดู)
+        quoteText.innerText = `"${data.data.content}"`;
+        
+    } catch (error) {
+        quoteText.innerText = "เกิดข้อผิดพลาดในการดึงข้อมูล";
+        console.error(error);
+    }
+}
+
+// คลิกปุ่มแล้วให้รันฟังก์ชัน
+quoteBtn.addEventListener('click', getQuote);
+
+// รันครั้งแรกตอนโหลดหน้าเว็บเลย
+getQuote();

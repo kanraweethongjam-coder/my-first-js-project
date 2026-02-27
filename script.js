@@ -13,11 +13,29 @@ btn.addEventListener('click', () => {
     }
 });
 
-const increaseFontSizebtn = document.getElementById('increaseFontSize');
+const fontBtn = document.getElementById("increaseFontSize");
+const h1 = document.getElementById("wellcome");
 
-increaseFontSizebtn.addEventListener('click', increaseFontSize);
+fontBtn.addEventListener("click", () => {
+    h1.classList.toggle("big-text");
 
-function increaseFontSize(){
-    let h1 = document.getElementById("wellcome");
-    h1.style.fontSize = "100px";
-}
+    if(h1.classList.contains("big-text")){
+        fontBtn.innerText = "ลดขนาดตัวอักษร";
+    } else {
+        fontBtn.innerText = "เพิ่มขนาดตัวอักษร";
+    }
+});
+
+const ChangeColorBtn = document.getElementById("ChangeColor");
+const h1_ChangeColor = document.getElementById("wellcome")
+
+ChangeColorBtn.addEventListener('click', () => {
+    h1_ChangeColor.classList.toggle("big-text");
+
+    if(h1_ChangeColor.classList.contains("change-color")){
+        ChangeColorBtn.innerText = "สีปกติ";
+    } else {
+        ChangeColorBtn.innerText = "สีแดง";
+    }
+
+});
